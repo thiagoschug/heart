@@ -108,13 +108,15 @@ export default function App() {
             animate={{ opacity: 1 }}
             className="relative w-full h-screen flex items-center justify-center overflow-hidden"
           >
-            <TextHeart />
-            
+            <div className="absolute inset-0 flex items-center justify-center">
+              <TextHeart />
+            </div>
+
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 3, duration: 1.5 }}
-              className="z-20 text-center"
+              className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center"
             >
               <h2 className="text-pink-deep font-mono text-xl tracking-[0.3em] uppercase glow-text mb-2">
                 Decrypted
@@ -132,13 +134,16 @@ export default function App() {
               </motion.button>
             </motion.div>
 
-            {/* Subtle tech overlays */}
-            <div className="absolute top-8 left-8 text-[10px] font-mono text-white/10 uppercase tracking-widest space-y-1">
-                <div>ln: 420</div>
-                <div>id: 0xDEADBEEF</div>
-                <div>type: organic_emotion</div>
+            <div className="absolute top-8 left-1/2 -translate-x-1/2 flex flex-col items-center text-[10px] font-mono text-white/10 uppercase tracking-widest">
+              <div>ln: 420</div>
+              <div>id: 0xDEADBEEF</div>
+              <div>type: organic_emotion</div>
+
+              <h2 className="mt-2 text-pink-deep font-mono text-xl tracking-[0.3em] uppercase glow-text">
+                i love you Grazy ❤
+              </h2>
             </div>
-            
+                        
             <div className="absolute bottom-8 right-8 text-[10px] font-mono text-white/10 uppercase tracking-widest">
                 heart_reveal // success
             </div>
